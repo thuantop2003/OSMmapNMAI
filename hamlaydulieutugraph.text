@@ -1,0 +1,6 @@
+sủ dụng thư viện networkx 
+Lấy danh sách node:      dùng vòng lặp for node in graph.nodes() để lấy các id: node là giá trị của id
+lấy dữ liệu của 1 node đã biết id:    x=graph.nodes["id"]['dữ liệu cần tìm của node']    phương thức trả về dữ liệu của node    
+lấy danh sách edges:   dùng for edge in graph.nodes() để lấy các giá trị của cạnh:  egde[0] giá trị source_id; egde[1] giá trị target_id
+lấy các dữ liệu khác của egdes:      dùng for edge in graph.nodes(data=true) để lấy các thông tin thêm bằng edge[2]['tên dữ liệu cần lấy']   osmid; name; highway; oneway; reverse, length, id
+graph.edges() và graph.nodes() đều có thể chuyển thành list() : x=list(graph.nodes()) để gọi ra 1 giá trị
