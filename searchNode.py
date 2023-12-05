@@ -60,13 +60,9 @@ def findNearEdgeId(nodeid:str,file_path:str):
 def findNearNodeid(nodeid:str,file_path:str,G:nx.MultiDiGraph):
     edgeid=findNearEdgeId(nodeid,file_path)
     for edge in G.edges(data=True):
-        if(type(edge[2]["osmid"]=='int')):
-            if(edge[2]["osmid"]==int(edgeid)):
-                return edge[1]
-        else:
-            if(int(edgeid) in edge[2]["osmid"]):
-                return edge[1]
-    return 0;
+        if(edge[2]["osmid"]==edgeid):
+            return edge[1]
+    return edgeid;
 
         
             
