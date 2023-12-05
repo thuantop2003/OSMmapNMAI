@@ -6025,7 +6025,7 @@
     <edge source="6677147299" target="6415438059" id="0">
       <data key="d8">[710279560, 1204906467]</data>
       <data key="d9">True</data>
-      <data key="d15">['2', '4']</data>
+      <data key="d15">['4', '2']</data>
       <data key="d10">Phố Hào Nam</data>
       <data key="d11">secondary</data>
       <data key="d12">False</data>
@@ -11580,8 +11580,8 @@
       <data key="d13">46.226</data>
       <data key="d14">LINESTRING (105.8304408 21.0257454, 105.8305046 21.0258266, 105.8305486 21.0259478, 105.8305662 21.02603, 105.8305905 21.0261307)</data>
     </edge>
-    <data key="d0">2023-12-03 08:53:40</data>
-    <data key="d1">OSMnx 1.7.1</data>
+    <data key="d0">2023-12-05 09:49:04</data>
+    <data key="d1">OSMnx 1.8.0</data>
     <data key="d2">epsg:4326</data>
     <data key="d3">True</data>
   </graph>

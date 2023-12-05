@@ -1,6 +1,7 @@
-import osmnx as ox
 import networkx as nx
-#lấy đồ thị ra khỏi file
+
+
+# lấy đồ thị ra khỏi file
 def getgraph(filepath):
     try:
         G = nx.read_graphml(filepath)
