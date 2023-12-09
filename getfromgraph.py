@@ -3,7 +3,7 @@ import networkx as nx
 #lấy đồ thị ra khỏi file
 def getgraph(filepath):
     try:
-        G = ox.load_graphml(filepath)
+        G = nx.read_graphml(filepath)
         return G
     except Exception as e:
         print(f"Error: {e}")

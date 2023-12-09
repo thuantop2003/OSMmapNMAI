@@ -1,11 +1,10 @@
+
 import getfromgraph as gfg
 import DijkstraAlgorithm as DA
 import searchNode as SN
 import osmnx as ox
+import GBFSAlgorithm as GBF
 path=r'data\QTGfull.graphml'
 osmpath=r'data\map.osm'
 G=gfg.getgraph(path)
-print(SN.findNearEdgeId("11059028947",osmpath))
-print(SN.findNearNodeid("11059028947",osmpath,G))
-print(DA.DSearch(G,"1497544796","5704011550"))
-
+print(SN.findNodeidNearEdge('21.0225027','105.8387347',osmpath))

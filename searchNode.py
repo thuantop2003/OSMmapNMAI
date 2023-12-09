@@ -63,6 +63,15 @@ def findNearNodeid(nodeid:str,file_path:str,G:nx.MultiDiGraph):
         if(edge[2]["osmid"]==edgeid):
             return edge[1]
     return edgeid;
+def findNodeidNearEdge(lat:str,lon:str,file_path:str):
+    nodes=extract_nodes_from_osm(file_path)
+    min=10
+    for node in nodes:
+        d=pow((float(lat)-float(node['lat'])),2)+pow((float(lon)-float(node['lon'])),2)
+        if(d<min):
+            min=d
+            n=node['id']
+    return n
 
         
             
