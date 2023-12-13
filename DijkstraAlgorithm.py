@@ -1,6 +1,7 @@
 import networkx as nx
 from queue import Queue
 import getfromgraph as gfg
+import searchNode as sN
 #hàm chuyển hàng đợi thành mảng
 def list_to_queue(my_arr:list):
     my_queue = Queue()
@@ -63,6 +64,7 @@ def DSearch(G:nx.MultiDiGraph,nodestart:str,nodefinish:str):
     current = nodefinish
     #lưu danh sách các node trên đường đi
     while current is not None:
-        path.insert(0, current)
+        x = sN.findLatLonByNodeid(current,r'data\map.osm')
+        path.insert(0, x)
         current = parent.get(current, None)
     return path

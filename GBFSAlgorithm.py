@@ -4,7 +4,7 @@ import heapq
 import getfromgraph as gfg
 from geopy.distance import geodesic
 from math import sin, cos, sqrt, atan2, radians
-
+import searchNode as sN
 
 #Công thức haversine
 def haversine_distance(lat1, lon1, lat2, lon2):
@@ -53,8 +53,11 @@ def GBFSearch(G: nx.MultiDiGraph, nodestart: str, nodefinish: str):
         visited.add(current_node)
 
         if current_node == nodefinish:
-            return current_path
-
+            list=[]
+            for nodeid in current_path:
+                x=sN.findLatLonByNodeid(nodeid,r'data\map.osm')
+                list.append(x)
+            return list
         neighbors_list = neighbors(G, current_node, nodefinish)
 
         for neighbor in neighbors_list:
