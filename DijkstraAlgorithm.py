@@ -64,7 +64,11 @@ def DSearch(G:nx.MultiDiGraph,nodestart:str,nodefinish:str):
     current = nodefinish
     #lưu danh sách các node trên đường đi
     while current is not None:
-        x = sN.findLatLonByNodeid(current,r'data\map.osm')
-        path.insert(0, x)
+        a=[]
+        x = G.nodes[current]['x']
+        y= G.nodes[current]['y']
+        a.append(y)
+        a.append(x)
+        path.insert(0, a)
         current = parent.get(current, None)
     return path

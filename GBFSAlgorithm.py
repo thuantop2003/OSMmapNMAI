@@ -55,8 +55,12 @@ def GBFSearch(G: nx.MultiDiGraph, nodestart: str, nodefinish: str):
         if current_node == nodefinish:
             list=[]
             for nodeid in current_path:
-                x=sN.findLatLonByNodeid(nodeid,r'data\map.osm')
-                list.append(x)
+                a=[]
+                x = G.nodes[nodeid]['x']
+                y= G.nodes[nodeid]['y']
+                a.append(y)
+                a.append(x)
+                list.append(a)
             return list
         neighbors_list = neighbors(G, current_node, nodefinish)
 
